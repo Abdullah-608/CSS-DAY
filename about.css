@@ -1,0 +1,79 @@
+@import "./base.css";
+
+body {
+    background-color: var(--White);
+    color: var(--Orange);
+    font-family: "Inter", sans-serif;
+}
+
+main {
+    padding: 3rem 10rem;
+}
+
+h1 {
+    font-size: 5rem;
+    margin-bottom: 3rem;
+    text-align: center;
+}
+
+.about-content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+section {
+    background: rgba(255, 123, 84, 0.1);
+    padding: 2rem;
+    border-radius: 1rem;
+    transition: transform 0.3s ease;
+}
+
+section:hover {
+    transform: translateY(-10px);
+}
+
+h2 {
+    color: var(--Orange);
+    margin-bottom: 1rem;
+    font-size: 2rem;
+}
+
+p, ul {
+    color: #333;
+    line-height: 1.6;
+}
+
+.values ul {
+    list-style-position: inside;
+    padding-left: 1rem;
+}
+
+.values li {
+    margin: 0.5rem 0;
+}
+
+/* Animations */
+.animate-fade-in {
+    animation: fadeIn 1s ease-in;
+}
+
+.animate-slide-up {
+    animation: slideUp 1s ease-out;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes slideUp {
+    from {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+} 

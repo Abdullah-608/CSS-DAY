@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact CSS Day</title>
+    <link rel="stylesheet" href="contact.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <header>
+        <a href="index.html" class="First">CSS Day</a>
+        <div>
+            <nav>
+                <ul>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="speakers.html">Speakers</a></li>
+                    <li><a href="contact.html" class="active">Contact</a></li>
+                </ul>
+            </nav>
+            <img src="./icons/shopping-cart.svg" alt="Shopping cart" class="cart-icon pulse">
+        </div>
+    </header>
+    <main>
+        <div class="page-decoration"></div>
+        
+        <h1 class="animate-fade-in">Get In Touch</h1>
+        <p class="subtitle animate-fade-in">We'd love to hear from you! Send us a message and we'll respond as soon as possible.</p>
+        
+        <div class="contact-container">
+            <form class="contact-form animate-slide-up">
+                <h2><span class="highlight">Send</span> a Message</h2>
+                
+                <div class="form-group animate-item" style="animation-delay: 0.1s">
+                    <label for="name">Name</label>
+                    <div class="input-container">
+                        <i class="fas fa-user"></i>
+                        <input type="text" id="name" placeholder="Your full name" required>
+                    </div>
+                </div>
+                
+                <div class="form-group animate-item" style="animation-delay: 0.2s">
+                    <label for="email">Email</label>
+                    <div class="input-container">
+                        <i class="fas fa-envelope"></i>
+                        <input type="email" id="email" placeholder="Your email address" required>
+                    </div>
+                </div>
+                
+                <div class="form-group animate-item" style="animation-delay: 0.3s">
+                    <label for="subject">Subject</label>
+                    <div class="input-container">
+                        <i class="fas fa-tag"></i>
+                        <input type="text" id="subject" placeholder="Message subject" required>
+                    </div>
+                </div>
+                
+                <div class="form-group animate-item" style="animation-delay: 0.4s">
+                    <label for="message">Message</label>
+                    <div class="input-container textarea-container">
+                        <i class="fas fa-comment-alt"></i>
+                        <textarea id="message" rows="5" placeholder="Your message here..." required></textarea>
+                    </div>
+                </div>
+                
+                <button type="submit" class="submit-btn animate-item" style="animation-delay: 0.5s">
+                    <span>Send Message</span>
+                    <i class="fas fa-paper-plane"></i>
+                </button>
+            </form>
+            
+            <div class="contact-info animate-slide-from-right">
+                <h2>Contact <span class="highlight">Information</span></h2>
+                
+                <div class="info-item">
+                    <div class="icon-container">
+                        <i class="fas fa-envelope"></i>
+                    </div>
+                    <div>
+                        <h3>Email Us</h3>
+                        <p>info@cssday.com</p>
+                    </div>
+                </div>
+                
+                <div class="info-item">
+                    <div class="icon-container">
+                        <i class="fas fa-phone-alt"></i>
+                    </div>
+                    <div>
+                        <h3>Call Us</h3>
+                        <p>+1 (555) 123-4567</p>
+                    </div>
+                </div>
+                
+                <div class="info-item">
+                    <div class="icon-container">
+                        <i class="fas fa-map-marker-alt"></i>
+                    </div>
+                    <div>
+                        <h3>Visit Us</h3>
+                        <p>123 Web Street<br>Developer City, 12345</p>
+                    </div>
+                </div>
+                
+                <div class="social-media">
+                    <h3>Follow Us</h3>
+                    <div class="social-icons">
+                        <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+                
+                <div class="map-container">
+                    <div class="map">
+                        <!-- You can replace this with an actual Google Maps iframe -->
+                        <div class="map-placeholder">
+                            <i class="fas fa-map-marked-alt"></i>
+                            <p>Interactive Map</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    
+    <footer class="animate-fade-in" style="animation-delay: 0.8s">
+        <p>&copy; 2023 CSS Day. All rights reserved.</p>
+    </footer>
+    
+    <script>
+        // Simple form submission animation
+        document.querySelector('.contact-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            const form = this;
+            const submitBtn = form.querySelector('.submit-btn');
+            
+            // Add sending class
+            submitBtn.classList.add('sending');
+            submitBtn.innerHTML = '<span>Sending...</span><i class="fas fa-spinner fa-spin"></i>';
+            
+            // Simulate form submission (replace with actual form submission)
+            setTimeout(function() {
+                form.style.transform = 'translateY(20px)';
+                form.style.opacity = '0';
+                
+                setTimeout(function() {
+                    // Show success message
+                    form.innerHTML = `
+                        <div class="success-message">
+                            <i class="fas fa-check-circle"></i>
+                            <h2>Message Sent!</h2>
+                            <p>Thank you for reaching out. We'll get back to you shortly.</p>
+                            <button type="button" class="reset-form-btn">Send Another Message</button>
+                        </div>
+                    `;
+                    form.style.transform = 'translateY(0)';
+                    form.style.opacity = '1';
+                    
+                    // Reset form button
+                    form.querySelector('.reset-form-btn').addEventListener('click', function() {
+                        location.reload();
+                    });
+                }, 300);
+            }, 2000);
+        });
+    </script>
+</body>
+</html> 
