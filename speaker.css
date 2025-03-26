@@ -1,0 +1,94 @@
+@import "./base.css";
+body {
+  background-color: var(--white);
+  color: var(--Orange);
+  font-family: "Inter", sans-serif;
+}
+
+.cart g path {
+  fill: var(--Orange);
+}
+
+h1 {
+  font-size: 5rem; /* 128px */
+  font-weight: bold;
+  margin-bottom: 5rem; /* 80px */
+  width: 100%;
+}
+
+main {
+  padding: 3rem 10rem; /* 50px 150px */
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.Speakers {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  height: 50%;
+  margin-bottom: 3rem; /* 50px */
+}
+
+h2 {
+  margin-top: 2.25rem; /* 36px */
+  font-size: 2.5rem; /* 40px */
+  width: 50%;
+}
+
+p {
+  margin-top: 1.25rem; /* 20px */
+  color: black;
+  width: 50%;
+}
+
+.i {
+  height: 18rem; /* 300px */
+  width: 18rem; /* 300px */
+  background-size: cover;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  main {
+    padding: 2rem; /* Smaller padding for smaller screens */
+  }
+
+  h1 {
+    font-size: 4rem; /* Adjusted font size for smaller screens */
+  }
+
+  h2 {
+    font-size: 2rem; /* Adjusted heading size for smaller screens */
+    width: 100%; /* Full width on small screens */
+  }
+
+  p {
+    width: 100%; /* Full width on small screens */
+  }
+
+  .Speakers {
+    width: 100%; /* Full width on small screens */
+    height: auto; /* Auto height on smaller screens */
+  }
+
+  .i {
+    height: 12rem; /* Adjusted image size for smaller screens */
+    width: 12rem;  /* Adjusted image size for smaller screens */
+  }
+}
+
+@media (max-width: 480px) {
+  h1 {
+    font-size: 3rem; /* Further adjusted font size for very small screens */
+  }
+
+  h2 {
+    font-size: 1.75rem; /* Further adjusted heading size for very small screens */
+  }
+
+  .i {
+    height: 10rem; /* Further smaller image size for very small screens */
+    width: 10rem;
+  }
+}

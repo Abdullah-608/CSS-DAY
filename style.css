@@ -1,0 +1,88 @@
+@import "./base.css";
+body {
+  background-color: var(--Orange);
+  color: var(--White);
+  font-family: "Inter", sans-serif;
+}
+
+main {
+  padding: 3rem 10rem; /* 50px 150px */
+}
+
+p {
+  font-family: inherit;
+  font-weight: bold;
+  font-size: 8rem; /* 128px */
+}
+
+p:nth-child(2) {
+  font-size: 2.5rem; /* 40px */
+  font-weight: normal;
+}
+
+.Buy {
+  margin-top: 6rem; /* 100px */
+  margin-right: 0.25rem; /* 4px */
+  padding: 1.25rem 4rem; /* 20px 64px */
+  background-color: var(--White);
+  color: var(--Orange);
+  font-weight: bold;
+  font-size: 2rem; /* 32px */
+  border: 0.25rem solid var(--Orange);
+  display: flex;
+  transition: outline 0.3s linear;
+}
+
+.Contact {
+  margin-top: 6rem; /* 100px */
+  padding: 1.25rem 4rem; /* 20px 64px */
+  background-color: var(--Orange);
+  color: var(--White);
+  border: 0.25rem solid white;
+  font-weight: bold;
+  font-size: 2rem; /* 32px */
+  transition: outline 0.3s linear;
+}
+
+.box {
+  display: flex;
+}
+
+button:hover {
+  outline: 0.25rem solid black;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  main {
+    padding: 2rem; /* Adjusted padding for smaller screens */
+  }
+
+  p {
+    font-size: 6rem; /* Adjusted font size for smaller screens */
+  }
+
+  p:nth-child(2) {
+    font-size: 1.5rem; /* Adjusted font size for smaller screens */
+  }
+
+  .Buy, .Contact {
+    font-size: 1.5rem; /* Adjusted button font size */
+    padding: 1rem 3rem; /* Adjusted padding for smaller buttons */
+  }
+}
+
+@media (max-width: 480px) {
+  p {
+    font-size: 4rem; /* Further adjusted font size for very small screens */
+  }
+
+  p:nth-child(2) {
+    font-size: 1.25rem; /* Further adjusted font size for very small screens */
+  }
+
+  .Buy, .Contact {
+    font-size: 1.25rem; /* Further adjusted button font size */
+    padding: 0.75rem 2rem; /* Further adjusted padding for very small buttons */
+  }
+}

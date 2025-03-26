@@ -1,0 +1,37 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --Orange: #ff7b54;
+  --White:#ffffff;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 60px;
+  align-items: center;
+}
+div {
+  display: flex;
+  align-items: center;
+}
+nav>ul {
+  display: flex;
+  align-items: center;
+  list-style: none;
+}
+li {
+  margin-right: 36px;
+}
+a {
+  text-decoration: none;
+  color: inherit;
+}
+.First {
+  font-weight: bold;
+  font-size: 30px;
+}
